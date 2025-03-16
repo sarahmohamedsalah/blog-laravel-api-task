@@ -58,3 +58,23 @@ Clone the repository to your local machine:
 
 ```bash
 git clone https://github.com/sarahmohamedsalah/blog-laravel-api-task.git
+
+go to directory
+
+```bash
+cd blog-laravel-api-task
+
+Set Up Environment Variables: Copy the .env.example file to .env so that you can configure your environment settings.
+
+```bash
+cp .env.example .env
+
+Generate Application Key: Laravel requires an application key for encryption and other internal functionality. Run the following command to generate the key:
+
+```bash
+php artisan key:generate
+
+Run Migrations: Run the database migrations to create all the necessary tables in your database.
+
+```bash
+php artisan migrate
