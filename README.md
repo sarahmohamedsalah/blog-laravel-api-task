@@ -1,3 +1,6 @@
+Here's the updated `README.md` with the specific commands you requested included in the installation section:
+
+```markdown
 # Blog Platform API
 
 A RESTful API for a blog platform built using **Laravel**. This API allows users to perform CRUD operations on blog posts with role-based access control. It supports **user authentication** with **JWT**, and implements roles for **admin** and **author** users.
@@ -57,24 +60,58 @@ Before running the project, make sure you have the following installed:
 Clone the repository to your local machine:
 
 ```bash
-git clone https://github.com/sarahmohamedsalah/blog-laravel-api-task.git
+git clone https://github.com/your-username/blog-laravel-api-task.git
+```
 
-go to directory
+### Step 2: Navigate to the Project Directory
+
+Go to the project directory:
 
 ```bash
 cd blog-laravel-api-task
+```
 
-Set Up Environment Variables: Copy the .env.example file to .env so that you can configure your environment settings.
+### Step 3: Install Project Dependencies
+
+Run the following command to install all PHP dependencies using **Composer**:
+
+```bash
+composer install
+```
+
+### Step 4: Set Up Environment Variables
+
+Copy the `.env.example` file to `.env` so that you can configure your environment settings:
 
 ```bash
 cp .env.example .env
+```
 
-Generate Application Key: Laravel requires an application key for encryption and other internal functionality. Run the following command to generate the key:
+### Step 5: Generate Application Key
+
+Laravel requires an application key for encryption and other internal functionality. Run the following command to generate the key:
 
 ```bash
 php artisan key:generate
+```
 
-Run Migrations: Run the database migrations to create all the necessary tables in your database.
+### Step 6: Run Database Migrations
+
+Run the database migrations to create all the necessary tables in your database:
 
 ```bash
 php artisan migrate
+```
+
+### Step 7: Start the Development Server
+
+To start the server and run the API locally:
+
+```bash
+php artisan serve
+```
+
+This will start the server at `http://127.0.0.1:8000`.
+
+
+
