@@ -43,7 +43,9 @@ class PostController extends Controller
         if (auth()->user()->role === 'author') {
             $query->where('author_id', auth()->id());  // Authors can only view their own posts
         }
-
+        if ($request->has('title') && $request->title) {
+            $query->where('title', 'like', '%' . $request->title . '%');  // Filter by title
+        }
         // Filter by category (optional)
         if ($request->has('category') && $request->category) {
             $query->where('category', $request->category);
